@@ -20,6 +20,7 @@ html, border-style, #root {
     height: 100%;
 }
   button {
+     margin-left:80px;
       cursor: pointer;
       background: ${color.primaryColor};
       border: none;
@@ -56,7 +57,6 @@ ul{
 `
 export const Container = styled.section`
    max-width: 360px;
-   height: 400px;
    background-color: #fff;
    margin: 30px auto;
    padding: 30px;

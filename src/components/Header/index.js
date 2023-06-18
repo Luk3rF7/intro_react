@@ -19,7 +19,6 @@ export default function Header() {
          <Link to="/sign ">
             <FaSignInAlt size={24} />
          </Link>
-         {botaoClicado ? 'Clicado' : 'Não clicado'}
       </Nav>
    )
 }

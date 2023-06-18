@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { toast } from 'react-toastify'
 import * as exampleActions from '../../store/modules/example/actions'
+import { toast } from 'react-toastify'
 /*
 import axios from '../../services/axios'
 */
@@ -25,10 +25,19 @@ export default function Login() {
       // ele me retorna assicrono
    }, []) //cada variavel mudavel entra no array) */
    const dispatch = useDispatch()
+
    function handleClick(e) {
       e.preventDefault()
-      dispatch(exampleActions.clicaBotaoRequest())
-      toast.warn('fazendo requisição')
+      const timer = () => {
+         new Promise(resolve => {
+            setTimeout(() => {
+               dispatch(exampleActions.clicaBotaoRequest())
+               resolve()
+            }, 3000)
+         })
+      }
+      timer()
+      toast.warn('pegando Requisição !')
    }
    return (
       <Container>

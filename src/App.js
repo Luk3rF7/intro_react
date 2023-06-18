@@ -16,8 +16,8 @@ import Routes from './routes'
 //exports
 export default function App() {
    return (
-      <PersistGate persistor={persistor}>
-         <Provider store={store}>
+      <Provider store={store}>
+         <PersistGate persistor={persistor}>
             <Router history={history}>
                <Header />
                <Routes />
@@ -27,7 +27,7 @@ export default function App() {
                   className="toast-container"
                />
             </Router>
-         </Provider>
-      </PersistGate>
+         </PersistGate>
+      </Provider>
    )
 }

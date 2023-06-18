@@ -7,18 +7,18 @@ const requisicao = () => {
    new Promise(resolve => {
       setTimeout(() => {
          resolve()
-      }, 600)
+      }, 200)
    })
 }
 
 function* exampleRequest() {
    try {
       yield call(requisicao)
-      yield put(actions.clicaBotaoSuccess)
+      yield put(actions.clicaBotaoSuccess())
       toast.success('Botão executado com sucess!!')
    } catch {
       toast.error('Deu erro.')
-      yield put(actions.clicaBotaoFailure)
+      yield put(actions.clicaBotaoFailure())
    }
 }
 export default all([takeLatest(types.BOTAO_CLICADO_REQUEST, exampleRequest)])
