@@ -1,0 +1,7 @@
+npm i styled-components
+
+ou
+
+npm install styled-components@latest
+
+css base do javascript

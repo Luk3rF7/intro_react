@@ -1,0 +1,2 @@
+prettier:
+npm i prettier -D
